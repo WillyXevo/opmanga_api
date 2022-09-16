@@ -1,6 +1,6 @@
 const express = require('express');
 const serverless = require("serverless-http");
-const scp = require('./scp.js');
+const scp = require('./script/scp.js');
 
 const app = express();
 const router = express.Router();
@@ -17,6 +17,8 @@ router.get('/:link', async function(req, res){
     let hsl = await scp.minta_gambar(url);
     res.json(hsl);
 });
+
+app.use('/.netlify/functions/api', router);  
 
 module.exports = app;
 module.exports.handler = serverless(app);

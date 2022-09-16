@@ -18,7 +18,7 @@ async function minta_semua(url){
                     date: $(this).find("span.chapterdate").text(),
                     link: $(this).find("a").attr('href')
                     };
-            console.log(chp);
+            //console.log(chp);
             all_chp.push(chp);
         });
         return await all_chp;
@@ -38,7 +38,7 @@ async function minta_gambar(url){
             
             var res = JSON.parse(m[1]);
             var imgs = res['sources'][0]['images'];
-            console.log(imgs);
+            //console.log(imgs);
             return await imgs;
         }
     }catch(error){

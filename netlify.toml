@@ -1,13 +1,3 @@
 [build]
-  functions = "functions"
-  base = "/"
-  publish = "dist/"
   command = "npm install && npm run build"
-
-[dev]
-  publish = "dist/"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  functions = "functions"

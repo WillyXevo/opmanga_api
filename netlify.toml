@@ -3,7 +3,6 @@
   base = "/"
   publish = "dist/"
   command = "npm install && npm run build"
-  functions = "functions"
 
 [dev]
   publish = "dist/"

@@ -1,11 +1,12 @@
 {
-  "name": "opmanga_api",
-  "version": "1.0.0",
+  "name": "OPManga",
+  "version": "0.0.1",
   "description": "OpManga REST API",
   "main": "functions/server.js",
   "scripts": {
     "build": "netlify-lambda build express",
-    "start": "nodemon server-local.js"
+    "start": "node server-local.js",
+    "pug": "node node_modules/pug-cli/index.js views/ --out ./"
   },
   "repository": {
     "type": "git",
@@ -19,18 +20,23 @@
     "api"
   ],
   "author": "9910",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/neverendingqs/netlify-express/issues"
+    "url": "https://github.com/WillyXevo/opmanga_api/issues"
   },
-  "homepage": "https://github.com/neverendingqs/netlify-express#readme",
-  "dependencies": {},
+  "homepage": "https://github.com/WillyXevo/opmanga_api#readme",
+  "dependencies": {
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6"
+  },
   "devDependencies": {
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.12",
-    "express": "^4.18.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "netlify-lambda": "^2.0.15",
-    "serverless-http": "^3.0.2",
-    "nodemon": "^1.19.2"
+    "pug": "^2.0.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "serverless-http": "^1.6.0"
   }
 }

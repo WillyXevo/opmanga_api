@@ -13,10 +13,13 @@ async function minta_semua(url){
         var ul = $('ul.clstyle'); 
         var all_chp = [];
         ul.find('li').each(function(i, elm){
+            var al = $(this).find("a").attr('href');
+            var aal = al.split("/");
             var chp = {
                     judul: $(this).find("span.chapternum").text(),
                     date: $(this).find("span.chapterdate").text(),
-                    link: $(this).find("a").attr('href')
+                    link: al,
+                    token: aal[3]
                     };
             //console.log(chp);
             all_chp.push(chp);

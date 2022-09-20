@@ -9,7 +9,6 @@ const scp = require('./scp.js');
 const router = express.Router();
 router.get('/', async (req, res) => {
   let url = "https://mangakita.net/manga/one-piece/";
-  console.log(url);
   let hsl = await scp.minta_semua(url);
   res.json(hsl);
 });
